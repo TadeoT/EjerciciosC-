@@ -1,0 +1,6 @@
+Nombre :Juan Perez
+Promedio :62
+Condicion : 1
+Nombre :Julian Martinez
+Promedio :32
+Condicion : 0
