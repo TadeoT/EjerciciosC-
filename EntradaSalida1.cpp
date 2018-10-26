@@ -2,6 +2,7 @@
 #include <fstream>
 #include <algorithm>
 #include <vector>
+#include <string>
 using namespace std;
 
 void show(vector<string> v){
@@ -20,7 +21,7 @@ int main() {
 	
 	vector<string> v;
 	
-	while(fL>>provincias){
+	while(getline(fL,provincias)){
 		v.push_back(provincias);
 	}
 	show(v);

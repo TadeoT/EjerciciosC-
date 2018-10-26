@@ -1,3 +1,5 @@
 BsAs
-ChubutCorrientes
-SantaFe
+Chubut
+Corrientes
+Rio Negro
+Santa Fe

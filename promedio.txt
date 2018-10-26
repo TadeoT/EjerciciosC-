@@ -1,6 +1,6 @@
 Nombre :Juan Perez
-Promedio :62
+Promedio :70
 Condicion : 1
-Nombre :Julian Martinez
-Promedio :32
-Condicion : 0
+Nombre :Hector Sosa
+Promedio :90
+Condicion : 1

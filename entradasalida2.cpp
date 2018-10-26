@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <tuple>
 using namespace std;
 struct datos{
 	string nombre;
@@ -27,27 +28,35 @@ int main() {
 	
 	ifstream fR;
 	ofstream fW;
+	int ban=0;
 	datos aux,modificar;
 	vector<datos>  Alumnos;
 	
 	
 	fR.open("lista.txt");
 	if(fR.is_open()){
-	while(getline(fR,aux.nombre)){
-		fR>>aux.nota1>>aux.nota2;
-		aux.promedio=(aux.nota1+aux.nota2)/2;
+	while(getline(fR,aux.nombre) && fR>>aux.nota1>>aux.nota2){
+		aux.promedio=(aux.nota1+aux.nota2)/2.0;
 		if(aux.promedio>=60){
 			aux.condicion=true;
 		}else aux.condicion=false;
 		Alumnos.push_back(aux);
+		cout<<Alumnos[ban].nombre<<endl;
+		cout<<"Nombre: "<<aux.nombre<<endl;
+		cout<<"Nota1: "<<aux.nota1<<"   ||   Nota2 "<<aux.nota2<<endl;
+		cout<<"Promedio : "<<aux.promedio<<endl;
+		if(aux.condicion){
+			cout<<"Condicion: Aprobado"<<endl;
+		}else cout<<"Condicion: Desaprobado"<<endl;
+		cout<<"---------------------------------------------------"<<endl;
 		
-		cout<<aux.nombre<<endl;
-		cout<<" Nota1: "<<aux.nota1<<" Nota2 "<<aux.nota2<<endl;
-		cout<<"Promedio : "<<aux.promedio<<endl<<"Condicion : "<<aux.condicion<<endl;
+		
 		fR.ignore();
+		ban++;
 	}
 	}else {
 		cout<<"No se pudo abrir el archivo"<<endl;
+		return 0;
 	}
 	
 	fR.close();
